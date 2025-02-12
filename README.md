@@ -128,3 +128,49 @@ Le subquery sono query annidate all'interno di un'altra query.
 Esempio:
 
 SELECT * FROM utenti WHERE eta > (SELECT AVG(eta) FROM utenti);
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+1. Tipi di Dati Numerici
+TINYINT (1 byte) → Intero molto piccolo (-128 a 127 o 0-255 per UNSIGNED)
+SMALLINT (2 byte) → Intero piccolo (-32,768 a 32,767)
+MEDIUMINT (3 byte) → Intero medio (-8,388,608 a 8,388,607)
+INT o INTEGER (4 byte) → Intero standard (-2,147,483,648 a 2,147,483,647)
+BIGINT (8 byte) → Intero grande (-9,223,372,036,854,775,808 a 9,223,372,036,854,775,807)
+DECIMAL(p, s) o NUMERIC(p, s) → Numero decimale con precisione fissa
+FLOAT (4 byte) → Numero a virgola mobile (meno preciso)
+DOUBLE (8 byte) → Numero a virgola mobile con più precisione
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+2. Tipi di Dati per il Testo
+CHAR(n) → Stringa a lunghezza fissa (da 1 a 255 caratteri)
+VARCHAR(n) → Stringa a lunghezza variabile (fino a 65,535 caratteri, dipende dalla configurazione del database)
+TEXT → Testo di grandi dimensioni (fino a 65,535 caratteri)
+TINYTEXT (255 caratteri)
+MEDIUMTEXT (16,777,215 caratteri)
+LONGTEXT (4,294,967,295 caratteri)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+3. Tipi di Dati Booleani
+BOOLEAN o BOOL → È uno pseudotipo in SQL (spesso memorizzato come TINYINT(1), con 0 = FALSE e 1 = TRUE)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+4. Tipi di Dati per Data e Ora
+DATE → Data nel formato YYYY-MM-DD
+DATETIME → Data e ora YYYY-MM-DD HH:MI:SS
+TIMESTAMP → Simile a DATETIME, ma cambia automaticamente con l'orario del server
+TIME → Solo ora HH:MI:SS
+YEAR → Solo anno YYYY
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+5. Tipi di Dati per Dati Binari
+BLOB → Memorizza dati binari (immagini, file, ecc.)
+TINYBLOB (fino a 255 byte)
+MEDIUMBLOB (fino a 16 MB)
+LONGBLOB (fino a 4 GB)
